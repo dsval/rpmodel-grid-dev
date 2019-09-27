@@ -9,7 +9,7 @@ License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Imports: rlang
+Imports: rlang, raster
 Suggests: dplyr, purrr, tidyr, knitr
 VignetteBuilder: knitr
 URL: https://github.com/stineb/rpmodel

@@ -205,7 +205,26 @@ rpmodel <- function( tc, vpd, co2, fapar, ppfd, patm = NA, elv = NA,
     if (verbose) rlang::warn("Atmospheric pressure (patm) not provided. Calculating it as a function of elevation (elv), assuming standard atmosphere (101325 Pa at sea level).")
     patm <- calc_patm(elv)
   }
-  
+  # avoid calc over masked areas, ocean water bodies, etc
+  if(is.na(tc)|is.na(vpd)|is.na(co2)|is.na(fapar)|is.na(ppfd)|is.na(elv)|is.na(soilm)|is.na(meanalpha)){
+	out <- list(
+		ca              = NA,
+		gammastar       = NA,
+		kmm             = NA,
+		ns_star         = NA,
+		chi             = NA,
+		mj              = NA,
+		mc              = NA,
+		ci              = NA,
+		lue             = NA,
+		gpp             = NA,
+		iwue            = NA,
+		gs              = NA,
+		vcmax           = NA,
+		vcmax25         = NA,
+		rd              = NA
+	)
+  }else{
   #-----------------------------------------------------------------------
   # Fixed parameters
   #-----------------------------------------------------------------------
@@ -372,7 +391,8 @@ rpmodel <- function( tc, vpd, co2, fapar, ppfd, patm = NA, elv = NA,
 
   ## Gross primary productivity
   gpp <- ifelse(!is.na(iabs), iabs * out_lue_vcmax$lue, rep(NA, len))   # in g C m-2 s-1
-
+  ## Still some pixels with negative values!!!
+  gpp[gpp<0]<-0.0	
   ## Vcmax per unit ground area is the product of the intrinsic quantum
   ## efficiency, the absorbed PAR, and 'n'
   vcmax <- ifelse(!is.na(iabs), iabs * out_lue_vcmax$vcmax_unitiabs, rep(NA, len))
@@ -407,6 +427,7 @@ rpmodel <- function( tc, vpd, co2, fapar, ppfd, patm = NA, elv = NA,
 
   if (!is.null(returnvar)) out <- out[returnvar]
 
+}
   return( out )
 
 }
