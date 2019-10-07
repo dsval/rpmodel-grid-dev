@@ -17,7 +17,7 @@ rpmodel.grid<-function(tc, vpd, co2, fapar, ppfd, elev = NA,
 		###############################################################################################
 		# 00. create array for results
 		###############################################################################################
-		rasterOptions(maxmemory=1e9, tmptime = 24, chunksize = 1e8,todisk = FALSE, overwrite=TRUE, tolerance = 0.5)
+		rasterOptions(maxmemory=1e7, tmptime = 24, chunksize = 1e6,todisk = FALSE, overwrite=TRUE, tolerance = 0.5)
 		y<-as.numeric(unique(format(getZ(tc),'%Y')))
 		ny <- nlayers(tc)
 		# gpp gC/m2
@@ -105,7 +105,7 @@ rpmodel.grid<-function(tc, vpd, co2, fapar, ppfd, elev = NA,
 		cl <- getCluster()
 		on.exit( returnCluster() )
 		nodes <- length(cl)
-		bs<- blockSize(tc, minblocks=nodes*5)
+		bs<- blockSize(tc, minblocks=nodes*10)
 		parallel::clusterEvalQ(cl, library("rpmodel"))
 		pmodel<-Vectorize(rpmodel,c("tc","vpd","co2","fapar","ppfd","meanalpha","soilm"))
 		parallel::clusterExport(cl, varlist=c("tc","vpd","co2",'elev','fapar',"ppfd","kphio",'beta','soilm','meanalpha','apar_soilm','bpar_soilm','c4','method_optci','method_jmaxlim','do_ftemp_kphio','do_soilmstress','pmodel','ny','density_h2o','y','bs'),envir=environment()) 
