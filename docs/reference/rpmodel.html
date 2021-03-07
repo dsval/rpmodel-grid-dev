@@ -17,23 +17,27 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -45,7 +49,6 @@
 <meta property="og:title" content="Invokes a P-model function call — rpmodel" />
 <meta property="og:description" content="R implementation of the P-model and its corrolary predictions (Prentice et al., 2014; Han et al., 2017)." />
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -63,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rpmodel</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.2</span>
       </span>
     </div>
 
@@ -85,7 +88,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -110,8 +113,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/stineb/rpmodel">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/stineb/rpmodel/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,12 +140,28 @@
     <p>R implementation of the P-model and its corrolary predictions (Prentice et al., 2014; Han et al., 2017).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>rpmodel</span>(<span class='no'>tc</span>, <span class='no'>vpd</span>, <span class='no'>co2</span>, <span class='no'>fapar</span>, <span class='no'>ppfd</span>, <span class='kw'>patm</span> <span class='kw'>=</span> <span class='fl'>NA</span>, <span class='kw'>elv</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>kphio</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>do_ftemp_kphio</span>, <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>do_soilmstress</span>, <span class='fl'>0.087</span>, <span class='fl'>0.0817</span>),
-  <span class='fl'>0.0492</span>), <span class='kw'>beta</span> <span class='kw'>=</span> <span class='fl'>146</span>, <span class='kw'>soilm</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>meanalpha</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>apar_soilm</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>bpar_soilm</span> <span class='kw'>=</span> <span class='fl'>0.685</span>, <span class='kw'>c4</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>method_optci</span> <span class='kw'>=</span> <span class='st'>"prentice14"</span>,
-  <span class='kw'>method_jmaxlim</span> <span class='kw'>=</span> <span class='st'>"wang17"</span>, <span class='kw'>do_ftemp_kphio</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>do_soilmstress</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>returnvar</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>rpmodel</span><span class='op'>(</span>
+  <span class='va'>tc</span>,
+  <span class='va'>vpd</span>,
+  <span class='va'>co2</span>,
+  <span class='va'>fapar</span>,
+  <span class='va'>ppfd</span>,
+  patm <span class='op'>=</span> <span class='cn'>NA</span>,
+  elv <span class='op'>=</span> <span class='cn'>NA</span>,
+  kphio <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>do_ftemp_kphio</span>, <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>do_soilmstress</span>, <span class='fl'>0.087182</span>, <span class='fl'>0.081785</span><span class='op'>)</span>, <span class='fl'>0.049977</span><span class='op'>)</span>,
+  beta <span class='op'>=</span> <span class='fl'>146</span>,
+  soilm <span class='op'>=</span> <span class='fl'>1</span>,
+  meanalpha <span class='op'>=</span> <span class='fl'>1</span>,
+  apar_soilm <span class='op'>=</span> <span class='fl'>0</span>,
+  bpar_soilm <span class='op'>=</span> <span class='fl'>0.733</span>,
+  c4 <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  method_optci <span class='op'>=</span> <span class='st'>"prentice14"</span>,
+  method_jmaxlim <span class='op'>=</span> <span class='st'>"wang17"</span>,
+  do_ftemp_kphio <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  do_soilmstress <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  returnvar <span class='op'>=</span> <span class='cn'>NULL</span>,
+  verbose <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -167,29 +186,29 @@
     <tr>
       <th>ppfd</th>
       <td><p>(Optional) Photosynthetic photon flux density (mol m-2 d-1, defaults to <code>NA</code>). Note that
-the units of <code>ppfd</code> (per area and per time) determine the units of outputs <code>lue</code>, <code>gpp</code>, 
-<code>vcmax</code>, and <code>rd</code>. For example, if <code>ppfd</code> is provided in units of mol m-2 month-1, then 
+the units of <code>ppfd</code> (per area and per time) determine the units of outputs <code>lue</code>, <code>gpp</code>,
+<code>vcmax</code>, and <code>rd</code>. For example, if <code>ppfd</code> is provided in units of mol m-2 month-1, then
 respective output variables are returned as per unit months.</p></td>
     </tr>
     <tr>
       <th>patm</th>
-      <td><p>Atmospheric pressure (Pa). When provided, overrides <code>elv</code>, otherwise <code>patm</code> 
-is calculated using standard atmosphere (101325 Pa), corrected for elevation (argument <code>elv</code>), 
+      <td><p>Atmospheric pressure (Pa). When provided, overrides <code>elv</code>, otherwise <code>patm</code>
+is calculated using standard atmosphere (101325 Pa), corrected for elevation (argument <code>elv</code>),
 using the function <a href='calc_patm.html'>calc_patm</a>.</p></td>
     </tr>
     <tr>
       <th>elv</th>
-      <td><p>Elevation above sea-level (m.a.s.l.). Is used only for calculating atmospheric pressure (using 
-standard atmosphere (101325 Pa), corrected for elevation (argument <code>elv</code>), using the function 
-<a href='calc_patm.html'>calc_patm</a>), if argument <code>patm</code> is not provided. If argument <code>patm</code> is provided, 
+      <td><p>Elevation above sea-level (m.a.s.l.). Is used only for calculating atmospheric pressure (using
+standard atmosphere (101325 Pa), corrected for elevation (argument <code>elv</code>), using the function
+<a href='calc_patm.html'>calc_patm</a>), if argument <code>patm</code> is not provided. If argument <code>patm</code> is provided,
 <code>elv</code> is overridden.</p></td>
     </tr>
     <tr>
       <th>kphio</th>
-      <td><p>Apparent quantum yield efficiency (unitless). Defaults to 0.0817 for
-<code>method_jmaxlim="wang17", do_ftemp_kphio=TRUE, do_soilmstress=FALSE</code>, 0.0870 for 
-<code>method_jmaxlim="wang17", do_ftemp_kphio=TRUE, do_soilmstress=TRUE</code>, and 0.0492 for 
-<code>method_jmaxlim="wang17", do_ftemp_kphio=FALSE, do_soilmstress=FALSE</code>, corresponding to the empirically 
+      <td><p>Apparent quantum yield efficiency (unitless). Defaults to 0.081785 for
+<code>method_jmaxlim="wang17", do_ftemp_kphio=TRUE, do_soilmstress=FALSE</code>, 0.087182 for
+<code>method_jmaxlim="wang17", do_ftemp_kphio=TRUE, do_soilmstress=TRUE</code>, and 0.049977 for
+<code>method_jmaxlim="wang17", do_ftemp_kphio=FALSE, do_soilmstress=FALSE</code>, corresponding to the empirically
 fitted value as presented in Stocker et al. (2019) Geosci. Model Dev. for model setup 'BRC', 'FULL', and 'ORG'
 respectively.</p></td>
     </tr>
@@ -199,27 +218,27 @@ respectively.</p></td>
     </tr>
     <tr>
       <th>soilm</th>
-      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Relative soil moisture as a fraction 
-of field capacity (unitless). Defaults to 1.0 (no soil moisture stress). This information is used to calculate 
-an empirical soil moisture stress factor (<a href='calc_soilmstress.html'>calc_soilmstress</a>) whereby the sensitivity is determined 
-by average aridity, defined by the local annual mean ratio of actual over potential evapotranspiration, 
+      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Relative soil moisture as a fraction
+of field capacity (unitless). Defaults to 1.0 (no soil moisture stress). This information is used to calculate
+an empirical soil moisture stress factor (<a href='calc_soilmstress.html'>calc_soilmstress</a>) whereby the sensitivity is determined
+by average aridity, defined by the local annual mean ratio of actual over potential evapotranspiration,
 supplied by argument <code>meanalpha</code>.</p></td>
     </tr>
     <tr>
       <th>meanalpha</th>
-      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Local annual mean ratio of 
+      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Local annual mean ratio of
 actual over potential evapotranspiration, measure for average aridity. Defaults to 1.0.</p></td>
     </tr>
     <tr>
       <th>apar_soilm</th>
-      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Parameter determining the 
+      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Parameter determining the
 sensitivity of the empirical soil moisture stress function. Defaults to 0.0, the empirically fitted value
 as presented in Stocker et al. (2019) Geosci. Model Dev. for model setup 'FULL' (corresponding to a setup
 with <code>method_jmaxlim="wang17", do_ftemp_kphio=TRUE, do_soilmstress=TRUE</code>).</p></td>
     </tr>
     <tr>
       <th>bpar_soilm</th>
-      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Parameter determining the 
+      <td><p>(Optional, used only if <code>do_soilmstress==TRUE</code>) Parameter determining the
 sensitivity of the empirical soil moisture stress function. Defaults to 0.685, the empirically fitted value
 as presented in Stocker et al. (2019) Geosci. Model Dev. for model setup 'FULL' (corresponding to a setup
 with <code>method_jmaxlim="wang17", do_ftemp_kphio=TRUE, do_soilmstress=TRUE</code>).</p></td>
@@ -301,7 +320,7 @@ photosynthesis model, P-model predictions, including all its corollary). This in
                                m' = m \sqrt( 1 - (c/m)^(2/3) )
                         $$
                         with \(c=0.41\) (Wang et al., 2017) if <code>method_jmaxlim=="wang17"</code>. \(Mc\) is
-                        the molecular mass of C (12.0107 g mol-1). \(m\) is given returned variable <code>mj</code>. 
+                        the molecular mass of C (12.0107 g mol-1). \(m\) is given returned variable <code>mj</code>.
                         If <code>do_soilmstress==TRUE</code>, \(LUE\) is multiplied with a soil moisture stress factor,
                         calculated with <a href='calc_soilmstress.html'>calc_soilmstress</a>.</p></li>
 <li><p><code>mj</code>: Factor in the light-limited assimilation rate function, given by
@@ -335,14 +354,16 @@ photosynthesis model, P-model predictions, including all its corollary). This in
                       $$
                            Vcmax = \phi(T) \phi0 Iabs n
                       $$
-                      where \(n\) is given by \(n=m/mc\), or
-                      $$
-                          n = (ci + K) / (ci + 2 \Gamma*)
-                      $$</p></li>
+                      where \(n\) is given by \(n=m'/mc\).</p></li>
 <li><p><code>vcmax25</code>: Maximum carboxylation capacity \(Vcmax\) (mol C m-2) normalised to 25 deg C
                      following a modified Arrhenius equation, calculated as \(Vcmax25 = Vcmax / fv\),
                      where \(fv\) is the instantaneous temperature response by Vcmax and is implemented
                      by function <a href='calc_ftemp_inst_vcmax.html'>calc_ftemp_inst_vcmax</a>.</p></li>
+<li><p><code>jmax</code>: The maximum rate of RuBP regeneration () at growth temperature (argument
+                      <code>tc</code>), calculated using
+                      $$
+                           A_J = A_C
+                      $$</p></li>
 <li><p><code>rd</code>: Dark respiration \(Rd\) (mol C m-2), calculated as
                      $$
                          Rd = b0 Vcmax (fr / fv)
@@ -355,41 +376,42 @@ photosynthesis model, P-model predictions, including all its corollary). This in
 </ul>
 
 <p>Additional variables are contained in the returned list if argument <code>method_jmaxlim=="smith19"</code></p><ul>
-<li><p><code>omega</code>: Term corresponding to \(\omega\), defined by Eq. 16 in Smith et al. (2019), 
+<li><p><code>omega</code>: Term corresponding to \(\omega\), defined by Eq. 16 in Smith et al. (2019),
         and Eq. E19 in Stocker et al. (2019).</p></li>
-<li><p><code>omega_star</code>: Term corresponding to \(\omega^\ast\), defined by Eq. 18 in Smith et al. 
+<li><p><code>omega_star</code>: Term corresponding to \(\omega^\ast\), defined by Eq. 18 in Smith et al.
         (2019), and Eq. E21 in Stocker et al. (2019).</p></li>
 </ul>
 
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>Bernacchi, C. J., Pimentel, C., and Long, S. P.:  In vivo temperature response func-tions  of  parameters  
-             required  to  model  RuBP-limited  photosynthesis,  Plant  CellEnviron., 26, 1419–1430, 2003</p>
+    <p>Bernacchi, C. J., Pimentel, C., and Long, S. P.:  In vivo temperature response func-tions  of  parameters
+             required  to  model  RuBP-limited  photosynthesis,  Plant  Cell Environ., 26, 1419–1430, 2003</p>
 <p>Heskel,  M.,  O’Sullivan,  O.,  Reich,  P.,  Tjoelker,  M.,  Weerasinghe,  L.,  Penillard,  A.,Egerton, J.,
              Creek, D., Bloomfield, K., Xiang, J., Sinca, F., Stangl, Z., Martinez-De La Torre, A., Griffin, K.,
              Huntingford, C., Hurry, V., Meir, P., Turnbull, M.,and Atkin, O.:  Convergence in the temperature response
              of leaf respiration across biomes and plant functional types, Proceedings of the National Academy of Sciences,
              113,  3832–3837,  doi:10.1073/pnas.1520282113,2016.</p>
 <p>Huber,  M.  L.,  Perkins,  R.  A.,  Laesecke,  A.,  Friend,  D.  G.,  Sengers,  J.  V.,  Assael,M. J.,
-             Metaxa, I. N., Vogel, E., Mares, R., and Miyagawa, K.:  New internationalformulation for the viscosity
+             Metaxa, I. N., Vogel, E., Mares, R., and Miyagawa, K.:  New international formulation for the viscosity
              of H2O, Journal of Physical and Chemical ReferenceData, 38, 101–125, 2009</p>
-<p>Prentice,  I. C.,  Dong,  N.,  Gleason,  S. M.,  Maire,  V.,  and Wright,  I. J.:  Balancingthe costs
+<p>Prentice,  I. C.,  Dong,  N.,  Gleason,  S. M.,  Maire,  V.,  and Wright,  I. J.:  Balancing the costs
              of carbon gain and water transport:  testing a new theoretical frameworkfor  plant  functional  ecology,
              Ecology  Letters,  17,  82–91,  10.1111/ele.12211,http://dx.doi.org/10.1111/ele.12211, 2014.</p>
 <p>Wang, H., Prentice, I. C., Keenan, T. F., Davis, T. W., Wright, I. J., Cornwell, W. K.,Evans, B. J.,
              and Peng, C.:  Towards a universal model for carbon dioxide uptake by plants, Nat Plants, 3, 734–741, 2017.
              Atkin, O. K., et al.:  Global variability in leaf respiration in relation to climate, plant func-tional
              types and leaf traits, New Phytologist, 206, 614–636, doi:10.1111/nph.13253,
-             https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.13253.</p>             
-<p>Smith, N. G., Keenan, T. F., Colin Prentice, I. , Wang, H. , Wright, I. J., Niinemets, U. , Crous, K. Y., 
-             Domingues, T. F., Guerrieri, R. , Yoko Ishida, F. , Kattge, J. , Kruger, E. L., Maire, V. , Rogers, A. , 
-             Serbin, S. P., Tarvainen, L. , Togashi, H. F., Townsend, P. A., Wang, M. , Weerasinghe, L. K. and Zhou, S. 
-             (2019), Global photosynthetic capacity is optimized to the environment. Ecol Lett, 22: 506-517. 
-             doi:10.1111/ele.13210</p>             
+             https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.13253.</p>
+<p>Smith, N. G., Keenan, T. F., Colin Prentice, I. , Wang, H. , Wright, I. J., Niinemets, U. , Crous, K. Y.,
+             Domingues, T. F., Guerrieri, R. , Yoko Ishida, F. , Kattge, J. , Kruger, E. L., Maire, V. , Rogers, A. ,
+             Serbin, S. P., Tarvainen, L. , Togashi, H. F., Townsend, P. A., Wang, M. , Weerasinghe, L. K. and Zhou, S.
+             (2019), Global photosynthetic capacity is optimized to the environment. Ecol Lett, 22: 506-517.
+             doi:10.1111/ele.13210</p>
 <p>Stocker, B. et al. Geoscientific Model Development Discussions (in prep.)</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>rpmodel</span>( <span class='kw'>tc</span> <span class='kw'>=</span> <span class='fl'>20</span>, <span class='kw'>vpd</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>co2</span> <span class='kw'>=</span> <span class='fl'>400</span>, <span class='kw'>fapar</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>ppfd</span> <span class='kw'>=</span> <span class='fl'>300</span>, <span class='kw'>elv</span> <span class='kw'>=</span> <span class='fl'>0</span>)</div><div class='output co'>#&gt; $ca
+    <pre class="examples"><div class='input'><span class='fu'>rpmodel</span><span class='op'>(</span> tc <span class='op'>=</span> <span class='fl'>20</span>, vpd <span class='op'>=</span> <span class='fl'>1000</span>, co2 <span class='op'>=</span> <span class='fl'>400</span>, fapar <span class='op'>=</span> <span class='fl'>1</span>, ppfd <span class='op'>=</span> <span class='fl'>300</span>, elv <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $ca
 #&gt; [1] 40.53
 #&gt; 
 #&gt; $gammastar
@@ -414,37 +436,35 @@ photosynthesis model, P-model predictions, including all its corollary). This in
 #&gt; [1] 28.14209
 #&gt; 
 #&gt; $lue
-#&gt; [1] 0.2544867
+#&gt; [1] 0.2547515
 #&gt; 
 #&gt; $gpp
-#&gt; [1] 76.34602
+#&gt; [1] 76.42545
 #&gt; 
 #&gt; $iwue
 #&gt; [1] 7.742446
 #&gt; 
 #&gt; $gs
-#&gt; [1] 0.5131212
+#&gt; [1] 0.513655
 #&gt; 
 #&gt; $vcmax
-#&gt; [1] 19.02667
+#&gt; [1] 19.04646
 #&gt; 
 #&gt; $vcmax25
-#&gt; [1] 29.86563
+#&gt; [1] 29.8967
+#&gt; 
+#&gt; $jmax
+#&gt; [1] 38.36589
 #&gt; 
 #&gt; $rd
-#&gt; [1] 0.3022512
+#&gt; [1] 0.3025656
 #&gt; </div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#references">References</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -455,7 +475,7 @@ photosynthesis model, P-model predictions, including all its corollary). This in
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

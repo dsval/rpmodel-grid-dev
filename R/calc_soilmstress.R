@@ -44,16 +44,20 @@
 #' 
 #' @references  Stocker, B. et al. Geoscientific Model Development Discussions (in prep.)
 #'
-#' @export
+
 calc_soilmstress <- function( soilm, meanalpha = 1.0, apar_soilm = 0.0, bpar_soilm = 0.685 ){
 
   # Fixed parameters
   x0 <- 0.0
   x1 <- 0.6
 
-  if (soilm > x1) {
+  if ( !is.na(soilm) & (soilm > x1)) {
 
     outstress <- 1.0
+
+  } else if (is.na(soilm)) {
+    
+    outstress <- NA
 
   } else {
 
@@ -67,3 +71,5 @@ calc_soilmstress <- function( soilm, meanalpha = 1.0, apar_soilm = 0.0, bpar_soi
 
   return(outstress)
 }
+#' @export
+calc_soilmstress<- Vectorize(calc_soilmstress,c('soilm','meanalpha'))
